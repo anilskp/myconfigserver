@@ -33,7 +33,7 @@ node {
     }
     stage('Deploy') {
     	docker.withRegistry('https://registry.hub.docker.com', "dockerhub") {
-			sh "docker run -d --name myconfigserver  -p 8001:8080  ${dockerImageName}"
+			sh "docker run -d --name myconfigserver  -p 8001:8001  ${dockerImageName}"
 		}
     }
 
